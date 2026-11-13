@@ -138,6 +138,20 @@ h1:has(.hl-box), h2:has(.hl-box) { line-height: 1.38; }
 .nav-toggle { display: none; background: none; border: 0; width: 44px; height: 44px; padding: 10px; color: var(--cream); }
 .nav-toggle span { display: block; height: 2px; background: currentColor; border-radius: 2px; margin: 5px 0; transition: transform .3s, opacity .3s; }
 
+/* Switch entre as duas frentes da Ellü (igual ao site de Consórcios + Seguros) */
+.front-switch {
+  display: inline-flex; align-items: center; padding: 4px; border-radius: 999px; background: rgba(255,255,255,.07);
+  box-shadow: inset 0 0 0 1px rgba(230,217,200,.18); font-family: var(--font-display); font-size: .72rem; font-weight: 600; letter-spacing: .02em;
+}
+.nav .front-switch a:not(.btn) {
+  padding: .55em .95em; border-radius: 999px; color: rgba(243,236,226,.7); opacity: 1; font-size: inherit; font-family: inherit; font-weight: inherit;
+  transition: color .25s, background .25s; display: inline-flex; align-items: center; gap: 5px; white-space: nowrap;
+}
+.nav .front-switch a:not(.btn)::after { display: none; }
+.nav .front-switch a:not(.btn):hover { color: var(--cream-50); }
+.nav .front-switch a.is-on { background: var(--cream-50); color: var(--green-800); }
+.front-switch svg { width: 12px; height: 12px; }
+
 /* Submenu "Testes Comportamentais" */
 .nav-drop { position: relative; }
 .nav-drop__btn {
@@ -883,6 +897,12 @@ body.modal-open { overflow: hidden; }
 /* =========================================================
    Responsive
    ========================================================= */
+@media (max-width: 1280px) and (min-width: 901px) {
+  .nav { gap: 24px; }
+}
+@media (max-width: 1100px) and (min-width: 901px) {
+  .front-switch { display: none; }
+}
 @media (max-width: 1080px) {
   .float-card--a { left: -20px; }
   .float-card--b { right: -10px; }
@@ -913,6 +933,7 @@ body.modal-open { overflow: hidden; }
   .nav-drop__menu b { color: var(--orange-300); font-size: 1.1rem; font-weight: 400; }
   .nav-drop__menu small { color: rgba(243,236,226,.6); }
   .nav .nav-drop__menu a:not(.btn):hover, .nav .nav-drop__menu a.is-active { background: rgba(255,255,255,.06); }
+  .front-switch { font-size: .78rem; }
   .nav-toggle { display: block; position: relative; z-index: 2; }
   .nav-toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .nav-toggle.is-open span:nth-child(2) { opacity: 0; }
