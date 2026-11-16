@@ -454,7 +454,7 @@ const Qualify = (function () {
   const items = document.querySelectorAll(".dp-item");
   if (!items.length) return;
   const calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const COLORS = ["#F46F14", "#FF9A4D", "#F2A93B", "#013A36", "#1E8A6B"];
+  const COLORS = ["#EF7828", "#F79A5A", "#F2A93B", "#004444", "#1F7A72"];
 
   const play = (el) => {
     el.classList.remove("is-play");
