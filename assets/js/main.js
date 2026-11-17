@@ -156,7 +156,7 @@ const Qualify = (function () {
         <div class="qmodal__top grain">
           <button class="qmodal__close" data-qclose aria-label="Fechar">${ICON.close}</button>
           <div class="qmodal__brand">
-            <span class="av"><img src="assets/img/cintia-1.jpg" alt=""></span>
+            <span class="av"><img src="assets/img/cintia.jpg" alt=""></span>
             <div><b id="qmodal-title">Diagnóstico rápido Ellü</b><small>Cíntia e time respondem pessoalmente</small></div>
           </div>
           <div class="qprogress"><div class="qprogress__bar"><i></i></div><span class="qprogress__txt">1 de ${steps.length}</span></div>
